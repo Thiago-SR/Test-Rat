@@ -1,0 +1,57 @@
+ID,Idade,Gênero,Escolaridade,Área,Estado Civil,Renda Familiar,Renda Pessoal,corr,rt,Resultado,Soma
+1,,,,,,,,27,11178.09,,
+2,25.0,M,SI,Medicina,S,7-11 SM,≤2 SM,20,17319.67,PM 1 Sim,27.0
+3,24.0,F,SI,Psicologia,S,4-6 SM,≤2 SM,6,16706.07,PM 1 Sim,24.0
+4,21.0,M,SI,Direito,S,4-6 SM,≤2 SM,12,17243.67,All não,21.0
+5,23.0,F,SI,Arquitetura e Urbanismo,S,4-6 SM,≤2 SM,14,16161.0,PM 1 Sim,28.0
+6,22.0,NB,SI,Sistemas de Informação,S,4-6 SM,≤2 SM,14,17073.67,PM 1 Sim,25.0
+7,20.0,M,MC,,S,4-6 SM,≤2 SM,14,17117.93,PM 1 Sim,21.0
+8,20.0,M,SI,Farmácia,S,4-6 SM,≤2 SM,14,17071.53,PM 1 Sim,28.0
+9,18.0,M,MI,,S,7-11 SM,≤2 SM,11,20537.07,PM 1 Sim,25.0
+10,20.0,M,SI,direito,S,7-11 SM,≤2 SM,16,16675.47,PM 1 Sim,28.0
+11,33.0,F,MeI,Ciência da computação,S,4-6 SM,≤2 SM,19,15557.23,PM 1 Sim,17.0
+12,20.0,M,SI,Sistemas de Informação,S,4-6 SM,≤2 SM,9,21763.93,PM 1 Sim,26.0
+13,24.0,NB,SI,Análise e desenvolvimento de sistemas,S,7-11 SM,≤2 SM,10,16195.28,PM 1 Sim,27.0
+14,32.0,F,SI,engenharia de controle e automação,S,4-6 SM,≤2 SM,17,16363.64,PM 1 Sim,23.0
+15,18.0,NB,MC,,S,4-6 SM,≤2 SM,10,21285.24,PM 1 Sim,23.0
+16,25.0,M,SI,Sistema de informação ,S,≤3 SM,≤2 SM,10,18582.63,PM 1 Sim,24.0
+17,26.0,F,SI,Psicologia,S,4-6 SM,3-5 SM,11,21930.7,PM 1 Sim,22.0
+18,18.0,NB,SI,Psicologia,S,4-6 SM,≤2 SM,14,21009.07,PM 1 Sim,30.0
+19,21.0,M,SI,Marketing,S,>11 SM,≤2 SM,16,14634.97,PM 1 Sim,21.0
+20,21.0,NB,MC,,S,≤3 SM,≤2 SM,14,17507.7,PM 1 Sim,20.0
+21,18.0,NB,MC,,S,≤3 SM,≤2 SM,12,23062.4,PM 1 Sim,22.0
+22,24.0,F,SI,Matemática,S,7-11 SM,3-5 SM,17,15663.87,PM 1 Sim,27.0
+23,20.0,NB,MC,,S,7-11 SM,≤2 SM,7,24933.07,PM 1 Sim,25.0
+24,18.0,F,SI,Pedagogia,S,7-11 SM,≤2 SM,13,19279.79,PM 1 Sim,23.0
+25,25.0,F,SC,Medicina Veterinária ,S,≤3 SM,≤2 SM,20,21269.73,PM 1 Sim,22.0
+26,27.0,NB,SC,Design,S,≤3 SM,≤2 SM,22,15008.57,PM 1 Sim,27.0
+27,31.0,NB,SC,Design Gráfico (Humanas),S,7-11 SM,6-10 SM,15,16213.0,PM 1 Sim,21.0
+28,35.0,F,SC,Direito,C,>11 SM,>10 SM,9,17054.7,PM 1 Sim,23.0
+29,18.0,M,MC,,S,>11 SM,≤2 SM,0,30007.5,PM 1 Sim,21.0
+30,48.0,F,MC,,S,≤3 SM,≤2 SM,16,19558.93,PM 1 Sim,12.0
+31,31.0,F,SI,Cybersegurança,S,≤3 SM,≤2 SM,5,12689.03,PM 1 Sim,28.0
+32,23.0,NB,MC,,S,≤3 SM,≤2 SM,7,20098.4,PM 1 Sim,24.0
+33,20.0,M,SI,Análise e desenvolvimento de sistemas,S,≤3 SM,≤2 SM,11,13322.8,PM 1 Sim,18.0
+34,20.0,M,SI,Pedagogia ,S,4-6 SM,≤2 SM,8,22769.87,PM 1 Sim,22.0
+35,20.0,M,SI,Licenciatura em Ciencias Sociais,S,≤3 SM,≤2 SM,9,21740.4,PM 1 Sim,29.0
+36,19.0,F,MC,,S,≤3 SM,≤2 SM,6,10986.43,PM 1 Sim,24.0
+37,29.0,F,SC,,S,7-11 SM,≤2 SM,14,18200.37,PM 1 Sim,24.0
+38,18.0,F,MC,,S,4-6 SM,≤2 SM,14,17979.6,PM 1 Sim,25.0
+39,22.0,NB,SI,Comunicação Social,S,>11 SM,≤2 SM,18,15476.87,PM 1 Sim,30.0
+40,40.0,F,SC,Ciência da Computação,Sep,≤3 SM,≤2 SM,18,14900.3,PM 1 Sim,29.0
+41,24.0,NB,SC,Tecnologia (Análise e Desenvolvimento de Sistemas),S,4-6 SM,≤2 SM,20,15432.83,PM 1 Sim,19.0
+42,23.0,F,SI,Bacharelado em Ciência e Tecnologia,S,≤3 SM,3-5 SM,10,13538.63,PM 1 Sim,22.0
+43,23.0,NB,SI,Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação,S,>11 SM,≤2 SM,18,15733.47,PM 1 Sim,30.0
+44,24.0,F,MC,,S,≤3 SM,≤2 SM,16,16765.03,PM 1 Sim,24.0
+45,24.0,NB,SI,Fotografia ,S,4-6 SM,≤2 SM,15,21891.41,PM 1 Sim,29.0
+46,42.0,M,MeC,,S,4-6 SM,≤2 SM,6,26696.87,PM 1 Sim,25.0
+47,18.0,M,MC,,S,≤3 SM,≤2 SM,16,14688.97,All não,26.0
+48,22.0,F,MC,,S,≤3 SM,≤2 SM,9,20852.77,All não,28.0
+49,,,,,,,,9,16767.53,,
+50,,,,,,,,9,18771.97,,
+51,,,,,,,,6,12506.3,,
+52,,,,,,,,8,24544.45,,
+53,,,,,,,,11,16309.33,,
+54,,,,,,,,13,18666.33,,
+55,,,,,,,,17,17750.5,,
+56,,,,,,,,8,15567.73,,
