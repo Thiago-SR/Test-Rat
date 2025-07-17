@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Configurações
-INPUT_FILE = "RAT_Respostas_Formulario_1.csv"
+INPUT_FILE = "Excel RAT ref - Respostas do Formulário 1.csv"
 OUTPUT_DIR = "form_analises"
 
 # Criar diretório de saída se não existir
@@ -107,7 +107,7 @@ def PM_1_Sim(colunas_desejadas):
             resultado = 'All não'  # Todos "Não"
 
         # Adiciona o resultado na lista
-        resultados.append([i + 1, resultado])  # ID da linha é i+1 (porque começa do índice 0)
+        resultados.append([i , resultado])  # ID da linha é i (porque começa do índice 0)
 
     # Criar um DataFrame com os resultados
     resultado_df = pd.DataFrame(resultados, columns=['ID', 'Resultado'])
@@ -142,7 +142,7 @@ def soma_form(colunas_desejadas):
                     soma += int(valor[0])  # Adiciona o primeiro caractere como número
 
         # Adiciona o ID da linha e a soma à lista de resultados
-        resultados.append([i + 1, soma])  # O ID da linha começa em 1
+        resultados.append([i , soma])  # O ID da linha começa em 1
 
     # Criar DataFrame com os resultados
     resultado_df = pd.DataFrame(resultados, columns=['ID', 'Soma'])
@@ -213,8 +213,8 @@ def processar_dados_demograficos(df):
     # Definindo os cabeçalhos conforme solicitado
     colunas_desejadas.columns = ['Idade', 'Gênero', 'Escolaridade','Área', 'Estado Civil', 'Renda Familiar', 'Renda Pessoal']
 
-    # Adicionar uma coluna de ID, começando de 2, incluindo o cabeçalho como linha 1
-    colunas_desejadas.insert(0, 'ID', range(2, len(colunas_desejadas) + 2))
+    # Adicionar uma coluna de ID
+    colunas_desejadas.insert(0, 'ID', range(1, len(colunas_desejadas) + 1))
 
     # Salvar o novo DataFrame filtrado e formatado com os cabeçalhos atualizados
     output_path = os.path.join(OUTPUT_DIR, "tabela_filtrada_formatada.csv")

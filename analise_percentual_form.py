@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 # Configurações centralizadas
 CONFIG = {
-    'arquivo_entrada': "RAT_Respostas_Formulario_1.csv",
+    'arquivo_entrada': "Excel RAT ref - Respostas do Formulário 1.csv",
     'pasta_destino': "analise_percentual_form",
     'encoding': "utf-8",
     'casas_decimais': 2
