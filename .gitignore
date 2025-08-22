@@ -1,0 +1,50 @@
+# Dados sensíveis e arquivos de entrada
+Data/
+Excel RAT ref - Respostas do Formulário 1.csv
+RAT_Respostas_Formulario_1.csv
+
+# Arquivos de saída e resultados
+output_teste/
+resultado_final/
+form_analises/
+analise_percentual_form/
+
+# Arquivos Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
