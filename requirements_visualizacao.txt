@@ -1,0 +1,15 @@
+# Dependências obrigatórias
+pandas>=1.5.0
+numpy>=1.24.0
+
+# Dependências para gráficos estáticos (recomendado)
+matplotlib>=3.6.0
+
+# Dependências para estilos avançados (opcional)
+seaborn>=0.12.0
+
+# Dependências para gráficos interativos (opcional)
+plotly>=5.15.0
+
+# Dependências do sistema (já incluídas no Python 3.4+)
+pathlib
