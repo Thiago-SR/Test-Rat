@@ -201,14 +201,35 @@ Data/
 - `resultado_final/tabela_final.csv`: Tabela consolidada com todos os dados
 
 ### Visualizações Geradas
-- `visualizacoes/desempenho_geral.png`: 4 gráficos de desempenho em 1
-- `visualizacoes/correlacao_acertos_tempo.png`: Correlação acertos vs tempo
-- `visualizacoes/top_palavras_acerto.png`: Top 10 palavras com maior acerto
-- `visualizacoes/acertos_vs_erros.png`: Comparação acertos vs erros por palavra
-- `visualizacoes/alta_taxa_sem_resposta.png`: Análise de respostas sem resposta
-- `visualizacoes/distribuicao_idade.png`: Distribuição por faixa etária
-- `visualizacoes/distribuicao_genero.png`: Distribuição por gênero
-- `visualizacoes/distribuicao_escolaridade.png`: Distribuição por escolaridade
+
+#### 📊 **Análise de Desempenho**
+![Desempenho Geral](visualizacoes/desempenho_geral.png)
+*4 gráficos em 1: Distribuição de acertos, boxplot, tempo de resposta e correlação*
+
+![Correlação Acertos vs Tempo](visualizacoes/correlacao_acertos_tempo.png)
+*Correlação entre número de acertos e tempo de resposta com linha de tendência*
+
+#### 📝 **Análise de Palavras**
+![Top 10 Palavras](visualizacoes/top_palavras_acerto.png)
+*Top 10 palavras com maior taxa de acerto*
+
+![Acertos vs Erros](visualizacoes/acertos_vs_erros.png)
+*Comparação lado a lado entre acertos e erros por palavra*
+
+![Alta Taxa Sem Resposta](visualizacoes/alta_taxa_sem_resposta.png)
+*Palavras com alta taxa de respostas sem resposta (>20%)*
+
+#### 👥 **Análise Demográfica**
+![Distribuição por Idade](visualizacoes/distribuicao_idade.png)
+*Distribuição de participantes por faixa etária*
+
+![Distribuição por Gênero](visualizacoes/distribuicao_genero.png)
+*Distribuição de participantes por gênero*
+
+![Distribuição por Escolaridade](visualizacoes/distribuicao_escolaridade.png)
+*Distribuição de participantes por nível de escolaridade*
+
+#### 📋 **Resumos Estatísticos**
 - `visualizacoes/resumo_estatistico_teste.csv`: Resumo estatístico dos dados de teste
 - `visualizacoes/resumo_estatistico_palavras.csv`: Resumo estatístico das palavras
 
@@ -263,6 +284,28 @@ O sistema inclui logging detalhado para facilitar debugging:
 - Use `--modo basico` para gráficos estáticos rápidos
 - Use `--modo completo` para apresentações profissionais
 - Os gráficos são salvos automaticamente na pasta `visualizacoes/`
+
+### 🖼️ **Galeria de Visualizações**
+
+Aqui estão exemplos das visualizações que o sistema gera automaticamente:
+
+#### **Dashboard de Desempenho**
+O sistema cria visualizações profissionais que mostram:
+- **Distribuições estatísticas** com histogramas e boxplots
+- **Correlações** entre diferentes métricas de desempenho
+- **Rankings** das palavras mais fáceis e difíceis
+- **Análises demográficas** para entender o perfil dos participantes
+
+#### **Qualidade dos Gráficos**
+- **Resolução alta**: 300 DPI para publicações e apresentações
+- **Cores profissionais**: Paleta de cores otimizada para acessibilidade
+- **Layout responsivo**: Gráficos que se adaptam a diferentes tamanhos
+- **Legendas claras**: Títulos e labels informativos em português
+
+#### **Formatos de Saída**
+- **PNG**: Para relatórios, apresentações e publicações
+- **HTML**: Para dashboards interativos (se plotly disponível)
+- **CSV**: Para análises estatísticas detalhadas
 
 ## 🤝 Contribuição
 
