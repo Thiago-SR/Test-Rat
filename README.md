@@ -21,13 +21,15 @@ O projeto está organizado em módulos especializados que executam diferentes et
 Test-Rat/
 ├── Data/                           # Dados de entrada (excluído do git)
 ├── analise_dados_teste.py         # Módulo principal de análise de dados
+├── visualizacao_unificada.py      # Sistema de visualização unificado
 ├── analise_form.py                # Análise de formulários e questionários
 ├── analise_percentual_form.py     # Análise percentual detalhada
 ├── script_final.py                # Script de consolidação final
 ├── output_teste/                  # Resultados intermediários
 ├── resultado_final/               # Resultados finais consolidados
 ├── form_analises/                 # Análises de formulários
-└── analise_percentual_form/       # Análises percentuais detalhadas
+├── analise_percentual_form/       # Análises percentuais detalhadas
+└── visualizacoes/                 # Gráficos e visualizações gerados
 ```
 
 ## 🔧 Módulos Principais
@@ -53,7 +55,26 @@ Test-Rat/
 - `dados_etapa_01.csv`: Métricas por participante
 - `resultado_final.csv`: Análise agregada por palavra
 
-### 2. `analise_form.py` - Análise de Formulários
+### 2. `visualizacao_unificada.py` - Sistema de Visualização
+**Função**: Cria visualizações gráficas profissionais dos dados analisados
+
+**Funcionalidades**:
+- **Detecção Automática**: Detecta bibliotecas disponíveis (matplotlib, seaborn, plotly)
+- **Múltiplos Modos**: `auto`, `minimo`, `basico`, `completo`
+- **Visualizações Estáticas**: Histogramas, boxplots, scatter plots, gráficos de barras
+- **Visualizações Interativas**: Gráficos HTML interativos (se plotly disponível)
+- **Análise Demográfica**: Gráficos de idade, gênero, escolaridade
+- **Análise de Desempenho**: Correlações, distribuições, rankings
+
+**Tipos de Gráficos Gerados**:
+- 📊 **Desempenho Geral**: 4 gráficos em 1 (acertos, tempo, correlação)
+- 📝 **Análise de Palavras**: Top 10 acertos, acertos vs erros, sem resposta
+- 👥 **Análise Demográfica**: Distribuição por idade, gênero, escolaridade
+- 🎯 **Gráficos Interativos**: Scatter plots e dashboards HTML
+
+**Saída**: Pasta `visualizacoes/` com arquivos PNG, HTML e CSV
+
+### 3. `analise_form.py` - Análise de Formulários
 **Função**: Processa respostas de questionários e calcula percentuais
 
 **Funcionalidades**:
@@ -65,7 +86,7 @@ Test-Rat/
 
 **Saída**: Múltiplos arquivos CSV com análises percentuais
 
-### 3. `analise_percentual_form.py` - Análise Percentual Detalhada
+### 4. `analise_percentual_form.py` - Análise Percentual Detalhada
 **Função**: Gera análises percentuais para variáveis demográficas e comportamentais
 
 **Funcionalidades**:
@@ -77,7 +98,7 @@ Test-Rat/
 
 **Saída**: Arquivos CSV individuais para cada variável analisada
 
-### 4. `script_final.py` - Consolidação Final
+### 5. `script_final.py` - Consolidação Final
 **Função**: Integra todos os resultados em uma única tabela
 
 **Processo**:
@@ -91,7 +112,17 @@ Test-Rat/
 
 ### Pré-requisitos
 ```bash
+# Dependências básicas (obrigatórias)
 pip install pandas
+
+# Dependências para visualizações (recomendadas)
+pip install matplotlib seaborn
+
+# Dependências para gráficos interativos (opcionais)
+pip install plotly
+
+# Ou instale tudo de uma vez
+pip install -r requirements_visualizacao.txt
 ```
 
 ### Execução
@@ -115,6 +146,18 @@ pip install pandas
    python script_final.py
    ```
 
+5. **Geração de Visualizações**:
+   ```bash
+   # Modo automático (recomendado)
+   python visualizacao_unificada.py
+   
+   # Modo básico (apenas gráficos estáticos)
+   python visualizacao_unificada.py --modo basico
+   
+   # Modo completo (gráficos estáticos + interativos)
+   python visualizacao_unificada.py --modo completo
+   ```
+
 ### Fluxo de Processamento Recomendado
 ```bash
 # Execute na ordem para garantir dependências
@@ -122,6 +165,9 @@ python analise_dados_teste.py
 python analise_form.py
 python analise_percentual_form.py
 python script_final.py
+
+# Gere visualizações após ter todos os dados
+python visualizacao_unificada.py
 ```
 
 ## 📊 Formato dos Dados de Entrada
@@ -154,6 +200,39 @@ Data/
 ### Arquivo Final
 - `resultado_final/tabela_final.csv`: Tabela consolidada com todos os dados
 
+### Visualizações Geradas
+
+#### 📊 **Análise de Desempenho**
+![Desempenho Geral](visualizacoes/desempenho_geral.png)
+*4 gráficos em 1: Distribuição de acertos, boxplot, tempo de resposta e correlação*
+
+![Correlação Acertos vs Tempo](visualizacoes/correlacao_acertos_tempo.png)
+*Correlação entre número de acertos e tempo de resposta com linha de tendência*
+
+#### 📝 **Análise de Palavras**
+![Top 10 Palavras](visualizacoes/top_palavras_acerto.png)
+*Top 10 palavras com maior taxa de acerto*
+
+![Acertos vs Erros](visualizacoes/acertos_vs_erros.png)
+*Comparação lado a lado entre acertos e erros por palavra*
+
+![Alta Taxa Sem Resposta](visualizacoes/alta_taxa_sem_resposta.png)
+*Palavras com alta taxa de respostas sem resposta (>20%)*
+
+#### 👥 **Análise Demográfica**
+![Distribuição por Idade](visualizacoes/distribuicao_idade.png)
+*Distribuição de participantes por faixa etária*
+
+![Distribuição por Gênero](visualizacoes/distribuicao_genero.png)
+*Distribuição de participantes por gênero*
+
+![Distribuição por Escolaridade](visualizacoes/distribuicao_escolaridade.png)
+*Distribuição de participantes por nível de escolaridade*
+
+#### 📋 **Resumos Estatísticos**
+- `visualizacoes/resumo_estatistico_teste.csv`: Resumo estatístico dos dados de teste
+- `visualizacoes/resumo_estatistico_palavras.csv`: Resumo estatístico das palavras
+
 ## 🔒 Segurança e Privacidade
 
 - **Dados Sensíveis**: A pasta `Data/` e arquivos CSV de entrada são excluídos do controle de versão
@@ -180,6 +259,54 @@ O sistema inclui logging detalhado para facilitar debugging:
 - Logs de erros e exceções
 - Logs de salvamento de arquivos
 
+## 📊 Sistema de Visualização
+
+### 🎯 Características Principais
+- **Inteligente**: Detecta automaticamente bibliotecas disponíveis
+- **Adaptativo**: Se ajusta aos recursos do sistema
+- **Unificado**: Um único script para todas as necessidades
+- **Profissional**: Gráficos de alta qualidade para apresentações
+
+### 🔧 Modos de Execução
+- **`auto`**: Detecta automaticamente o melhor modo disponível
+- **`minimo`**: Apenas resumos estatísticos em CSV
+- **`basico`**: Gráficos estáticos com matplotlib
+- **`completo`**: Todas as funcionalidades (estáticas + interativas)
+
+### 📈 Tipos de Visualizações
+1. **Análise de Desempenho**: Distribuições, correlações, boxplots
+2. **Análise de Palavras**: Rankings, comparações, taxas de acerto
+3. **Análise Demográfica**: Idade, gênero, escolaridade
+4. **Gráficos Interativos**: Dashboards HTML com plotly
+
+### 💡 Dicas de Uso
+- Execute primeiro os scripts de análise para ter os dados
+- Use `--modo basico` para gráficos estáticos rápidos
+- Use `--modo completo` para apresentações profissionais
+- Os gráficos são salvos automaticamente na pasta `visualizacoes/`
+
+### 🖼️ **Galeria de Visualizações**
+
+Aqui estão exemplos das visualizações que o sistema gera automaticamente:
+
+#### **Dashboard de Desempenho**
+O sistema cria visualizações profissionais que mostram:
+- **Distribuições estatísticas** com histogramas e boxplots
+- **Correlações** entre diferentes métricas de desempenho
+- **Rankings** das palavras mais fáceis e difíceis
+- **Análises demográficas** para entender o perfil dos participantes
+
+#### **Qualidade dos Gráficos**
+- **Resolução alta**: 300 DPI para publicações e apresentações
+- **Cores profissionais**: Paleta de cores otimizada para acessibilidade
+- **Layout responsivo**: Gráficos que se adaptam a diferentes tamanhos
+- **Legendas claras**: Títulos e labels informativos em português
+
+#### **Formatos de Saída**
+- **PNG**: Para relatórios, apresentações e publicações
+- **HTML**: Para dashboards interativos (se plotly disponível)
+- **CSV**: Para análises estatísticas detalhadas
+
 ## 🤝 Contribuição
 
 Para contribuir com o projeto:
@@ -194,6 +321,7 @@ Para dúvidas ou problemas:
 1. Verifique os logs de execução
 2. Confirme o formato dos dados de entrada
 3. Verifique se todas as dependências estão instaladas
+4. Para problemas de visualização, verifique se matplotlib está instalado
 
 ---
 
