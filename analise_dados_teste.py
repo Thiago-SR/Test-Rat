@@ -172,7 +172,7 @@ def main():
     etapa_1()
     print("\nExecutando Etapa 2...")
     etapa_2()
-    print("\nProcessamento concluído!")
+    print("\nProcessamento concluído!!")
 
 
 if __name__ == "__main__":
