@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Configurações
-INPUT_FILE = "Excel RAT ref - Respostas do Formulário 1.csv"
+INPUT_FILE = "Respostas_do_Formulario_1.csv"
 OUTPUT_DIR = "form_analises"
 
 # Criar diretório de saída se não existir
