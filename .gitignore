@@ -1,8 +1,14 @@
 # Dados sensíveis e arquivos de entrada
-Data
+Data/
+
 Respostas_do_Formulario_1.csv
 RAT_Respostas_Formulario_1.csv
 
+# Arquivos de saída e resultados
+output_teste/
+resultado_final/
+form_analises/
+analise_percentual_form/
 
 
 # Arquivos Python
